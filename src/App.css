@@ -1,0 +1,742 @@
+.website {
+  min-height: 100vh;
+  background-color: white;
+}
+
+/* --------------------
+   NAVIGATION
+-------------------- */
+
+.navbar {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #dedede;
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar a {
+  font-family: "DM Mono", monospace;
+  color: #c9a227;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+/* --------------------
+   HERO
+-------------------- */
+
+.hero {
+  width: 82%;
+  margin: 0 auto;
+  padding-top: 80px;
+  min-height: auto;
+  padding-bottom: 40px;
+}
+
+.name {
+  font-family: "Fraunces", serif;
+  font-weight: 400;
+  font-size: clamp(70px, 8vw, 130px);
+  line-height: 1;
+  margin: 0;
+  color: black;
+}
+
+/* Gold period */
+.name .gold-dot {
+  color: #c9a227;
+}
+
+/* Typewriter effect */
+.typed-name {
+  white-space: nowrap;
+}
+
+.typing-cursor {
+  display: inline-block;
+  height: 0.85em;
+  border-right: 3px solid #c9a227;
+  margin-left: 2px;
+  vertical-align: -0.05em;
+}
+
+/* --------------------
+   BOTTOM OF HERO
+-------------------- */
+
+.hero-bottom {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  gap: 80px;
+  margin-top: 15px;
+}
+
+/* --------------------
+   LAPTOP
+-------------------- */
+
+.laptop-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-laptop {
+  display: block;
+  width: 100%;
+  max-width: 750px;
+  height: auto;
+}
+
+/* --------------------
+   CONTACT INFO
+-------------------- */
+
+.contact {
+  font-family: "DM Mono", monospace;
+  text-align: right;
+}
+
+.contact-group {
+  margin-bottom: 28px;
+}
+
+.contact-label {
+  color: #c9a227;
+  margin-bottom: 15px;
+}
+
+.contact a,
+.contact p {
+  font-size: 18px;
+}
+
+.contact a {
+  color: black;
+}
+
+.social-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 35px;
+  margin-top: 35px;
+}
+
+.social-links a {
+  color: #b8b6b6;
+  text-decoration: underline;
+}
+
+/* --------------------
+   MOBILE
+-------------------- */
+
+@media (max-width: 800px) {
+  .navbar {
+    width: 90%;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+
+  .hero {
+    width: 90%;
+    padding-top: 50px;
+  }
+
+  .hero-bottom {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact {
+    text-align: left;
+  }
+
+  .social-links {
+    justify-content: flex-start;
+  }
+}
+
+/* --------------------
+   EXPLORE WORK
+-------------------- */
+
+.explore-work {
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px 0 110px;
+}
+
+.explore-heading {
+  font-family: "DM Mono", monospace;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #808080;
+  margin: 0 0 48px;
+}
+
+.work-categories {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr 0.9fr;
+  gap: 30px;
+  border-top: 1px solid #dedede;
+  padding-top: 18px;
+}
+
+.work-category {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  min-width: 0;
+  color: #b8b6b6;
+  text-decoration: none;
+}
+
+.work-number {
+  flex-shrink: 0;
+  font-family: "DM Mono", monospace;
+  font-size: 22px;
+  transition: color 0.25s ease;
+}
+
+.work-title {
+  font-family: "Fraunces", serif;
+  font-size: clamp(28px, 3.2vw, 68px);
+  font-weight: 400;
+  line-height: 1.15;
+  white-space: nowrap;
+  transition: color 0.25s ease;
+}
+
+.work-arrow {
+  flex-shrink: 0;
+  font-family: "DM Mono", monospace;
+  font-size: 25px;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Hover and keyboard focus */
+
+.work-category:hover .work-number,
+.work-category:focus-visible .work-number {
+  color: #c9a227;
+}
+
+.work-category:hover .work-title,
+.work-category:hover .work-arrow,
+.work-category:focus-visible .work-title,
+.work-category:focus-visible .work-arrow {
+  color: #000;
+}
+
+.work-category:hover .work-arrow,
+.work-category:focus-visible .work-arrow {
+  transform: translateX(8px);
+}
+
+/* Smaller screens */
+
+@media (max-width: 600px) {
+  .explore-work {
+    width: 90%;
+    padding: 50px 0 80px;
+  }
+
+  .explore-heading {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .work-category {
+    gap: 14px;
+  }
+
+  .work-number {
+    font-size: 16px;
+  }
+
+  .work-title {
+    font-size: clamp(28px, 7vw, 42px);
+  }
+
+  .work-arrow {
+    font-size: 20px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  .work-number,
+  .work-title,
+  .work-arrow {
+    transition: none;
+  }
+}
+
+/* --------------------
+   EXPERIENCE SECTION
+-------------------- */
+
+.experience-section {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0 110px;
+}
+
+.experience-heading {
+  font-family: "DM Mono", monospace;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #808080;
+  margin: 0 0 48px;
+}
+
+.experience-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #dedede;
+}
+
+@media (max-width: 600px) {
+  .experience-heading {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+}
+
+/* --------------------
+   SNAKE EXPERIENCE TIMELINE
+-------------------- */
+
+.snake-timeline {
+  margin-top: 60px;
+  padding: 0 3%;
+}
+
+/* Each experience forms one horizontal row */
+
+.snake-item {
+  position: relative;
+  display: flex;
+  min-height: 220px;
+  padding-bottom: 35px;
+}
+
+/* Alternate content between right and left */
+
+.snake-right {
+  justify-content: flex-end;
+}
+
+.snake-left {
+  justify-content: flex-start;
+}
+
+/* The horizontal timeline line */
+
+.snake-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #b8b6b6;
+}
+
+/* Curved connection between rows */
+
+.snake-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 220px;
+  width: 65px;
+  border: 1px solid #b8b6b6;
+  pointer-events: none;
+}
+
+.snake-right:not(:last-child)::after {
+  right: -1px;
+  border-left: none;
+  border-radius: 0 80px 80px 0;
+}
+
+.snake-left:not(:last-child)::after {
+  left: -1px;
+  border-right: none;
+  border-radius: 80px 0 0 80px;
+}
+
+/* Gold clickable dot */
+
+.snake-dot {
+  position: absolute;
+  top: -7px;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #c9a227;
+  cursor: pointer;
+  z-index: 2;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.snake-right .snake-dot {
+  left: 50%;
+}
+
+.snake-left .snake-dot {
+  left: 0;
+}
+
+.snake-dot:hover,
+.snake-dot-active {
+  transform: scale(1.35);
+  box-shadow: 0 0 0 5px rgba(201, 162, 39, 0.15);
+}
+
+.snake-dot:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 5px;
+}
+
+/* Text content */
+
+.snake-content {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 60px;
+  align-items: start;
+  padding: 25px 35px 35px;
+  box-sizing: border-box;
+}
+
+/* Job on the RIGHT: description appears on the LEFT */
+
+.snake-right .snake-job-info {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.snake-right .snake-details {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* Job on the LEFT: description appears on the RIGHT */
+
+.snake-left .snake-job-info {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.snake-left .snake-details {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.snake-job-info,
+.snake-details {
+  min-width: 0;
+}
+
+.snake-date {
+  font-family: "DM Mono", monospace;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #c9a227;
+  margin: 0 0 12px;
+}
+
+.snake-role {
+  font-family: "Fraunces", serif;
+  font-size: clamp(26px, 2.7vw, 42px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #000;
+  margin: 0 0 10px;
+}
+
+.snake-company {
+  font-family: "DM Mono", monospace;
+  font-size: 16px;
+  color: #808080;
+  margin: 0;
+}
+
+/* Description appears when dot is clicked */
+
+.snake-details {
+  margin-top: 0;
+}
+
+.snake-details[hidden] {
+  display: none;
+}
+
+.snake-details p {
+  font-family: "DM Mono", monospace;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555;
+  margin: 0;
+}
+
+/* --------------------
+   MOBILE
+-------------------- */
+
+@media (max-width: 768px) {
+  .snake-timeline {
+    padding: 0 0 0 12px;
+  }
+
+  .snake-item {
+    min-height: 0;
+    padding: 0 0 50px 30px;
+    justify-content: flex-start;
+    border-left: 1px solid #b8b6b6;
+  }
+
+  .snake-track,
+  .snake-item::after {
+    display: none;
+  }
+
+  .snake-right .snake-dot,
+  .snake-left .snake-dot {
+    left: -8px;
+    top: 4px;
+  }
+
+  .snake-content {
+    width: 100%;
+    padding: 0;
+  }
+
+  .snake-date {
+    font-size: 11px;
+  }
+
+  .snake-role {
+    font-size: clamp(25px, 6vw, 34px);
+  }
+
+  .snake-company {
+    font-size: 14px;
+  }
+
+  .snake-details p {
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .snake-dot {
+    transition: none;
+  }
+}
+
+/* --------------------
+   ABOUT SECTION
+-------------------- */
+
+.about-section {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0 120px;
+}
+
+.about-heading {
+  font-family: "DM Mono", monospace;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #808080;
+  margin: 0 0 48px;
+}
+
+.about-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #dedede;
+}
+
+/* Introduction */
+
+.about-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding: 60px 0 80px;
+}
+
+.about-title {
+  font-family: "Fraunces", serif;
+  font-size: clamp(42px, 4.5vw, 76px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: #000;
+  margin: 0 0 25px;
+}
+
+.about-title span {
+  color: #c9a227;
+}
+
+.about-subtitle {
+  font-family: "DM Mono", monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  color: #c9a227;
+  margin: 0;
+}
+
+/* Biography */
+
+.about-bio {
+  font-family: "DM Mono", monospace;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #333;
+}
+
+.about-bio p {
+  margin: 0 0 25px;
+}
+
+.about-bio p:last-child {
+  margin-bottom: 0;
+}
+
+/* Skills section */
+
+.about-skills {
+  border-top: 1px solid #dedede;
+  padding-top: 45px;
+}
+
+.skills-heading {
+  font-family: "DM Mono", monospace;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #808080;
+  margin: 0 0 45px;
+}
+
+.skills-group {
+  margin-bottom: 45px;
+}
+
+.skills-category {
+  font-family: "Fraunces", serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: #000;
+  margin: 0 0 20px;
+}
+
+/* Skill tags */
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid #d7d7d7;
+  border-radius: 6px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 14px;
+  color: #555;
+
+  transition:
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.skill-tag:hover {
+  border-color: #c9a227;
+  color: #c9a227;
+  transform: translateY(-3px);
+}
+
+/* --------------------
+   ABOUT MOBILE LAYOUT
+-------------------- */
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 40px 0 80px;
+  }
+
+  .about-heading {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .about-intro {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 40px 0 60px;
+  }
+
+  .about-title {
+    font-size: clamp(38px, 9vw, 56px);
+  }
+
+  .about-bio {
+    font-size: 14px;
+  }
+
+  .skills-heading {
+    font-size: 16px;
+  }
+
+  .skills-category {
+    font-size: 28px;
+  }
+
+  .skill-tag {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-tag {
+    transition: none;
+  }
+
+  .skill-tag:hover {
+    transform: none;
+  }
+}

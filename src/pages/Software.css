@@ -1,0 +1,367 @@
+/* =========================
+   SOFTWARE PAGE
+========================= */
+
+.software-page {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #111111;
+}
+
+/* -------------------------
+   HEADER
+------------------------- */
+
+.software-header {
+  width: 90%;
+  margin: 0 auto;
+  padding: 32px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+
+  border-bottom: 1px solid #dedede;
+}
+
+.software-header-left {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.software-back {
+  font-family: "DM Mono", monospace;
+  font-size: 14px;
+  color: #808080;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.software-back:hover {
+  color: #c9a227;
+}
+
+.software-header-divider {
+  width: 1px;
+  height: 30px;
+  background: #dedede;
+}
+
+.software-header-title {
+  font-family: "Fraunces", serif;
+  font-size: 26px;
+  color: #111111;
+  white-space: nowrap;
+}
+
+.software-nav {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.software-nav-link {
+  font-family: "DM Mono", monospace;
+  font-size: 13px;
+  color: #b8b6b6;
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+.software-nav-link:hover,
+.software-nav-active {
+  color: #111111;
+}
+
+/* -------------------------
+   INTRODUCTION
+------------------------- */
+
+.software-intro {
+  width: 90%;
+  margin: 0 auto;
+  padding: 85px 0 75px;
+}
+
+.software-intro h1 {
+  font-family: "Fraunces", serif;
+  font-size: clamp(54px, 8vw, 115px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin: 0 0 25px;
+}
+
+.software-intro h1 span {
+  color: #c9a227;
+}
+
+.software-intro p {
+  font-family: "DM Mono", monospace;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #808080;
+  max-width: 700px;
+  margin: 0;
+}
+
+/* -------------------------
+   PROJECT SECTION
+------------------------- */
+
+.software-projects {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0 110px;
+
+  border-top: 1px solid #dedede;
+}
+
+.software-projects-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  margin-bottom: 35px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #808080;
+}
+
+/* Two-column grid */
+
+.software-project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 35px;
+}
+
+/* Individual project card */
+
+.software-project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+
+  min-width: 0;
+  min-height: 340px;
+  padding: 35px;
+
+  border: 1px solid #dedede;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: inherit;
+  text-decoration: none;
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.software-project-card:hover {
+  border-color: #c9a227;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.035);
+}
+
+.software-project-card:focus-visible {
+  outline: 2px solid #c9a227;
+  outline-offset: 4px;
+}
+
+/* Card top */
+
+.software-project-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 35px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #c9a227;
+}
+
+.software-github-icon {
+  width: 24px;
+  height: 24px;
+  color: #808080;
+}
+
+.software-project-card h2 {
+  font-family: "Fraunces", serif;
+  font-size: clamp(30px, 3vw, 44px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #111111;
+
+  margin: 0 0 18px;
+}
+
+.software-project-description {
+  font-family: "DM Mono", monospace;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #808080;
+  margin: 0;
+}
+
+/* Card bottom */
+
+.software-card-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.software-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.software-technology-tag {
+  display: inline-block;
+  padding: 8px 13px;
+
+  border: 1px solid #dedede;
+  border-radius: 5px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  color: #666666;
+}
+
+.software-repository-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 20px;
+  border-top: 1px solid #dedede;
+
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #111111;
+}
+
+.software-repository-arrow {
+  font-size: 24px;
+  color: #c9a227;
+
+  transition: transform 0.25s ease;
+}
+
+.software-project-card:hover .software-repository-arrow {
+  transform: translate(3px, -3px);
+}
+
+/* -------------------------
+   FOOTER
+------------------------- */
+
+.software-footer {
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px 0 45px;
+
+  border-top: 1px solid #dedede;
+
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  color: #808080;
+  text-align: center;
+}
+
+/* -------------------------
+   RESPONSIVE LAYOUT
+------------------------- */
+
+@media (max-width: 900px) {
+  .software-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .software-nav {
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .software-header {
+    padding: 25px 0;
+  }
+
+  .software-header-left {
+    gap: 15px;
+  }
+
+  .software-header-title {
+    font-size: 22px;
+  }
+
+  .software-back,
+  .software-nav-link {
+    font-size: 12px;
+  }
+
+  .software-intro {
+    padding: 60px 0;
+  }
+
+  .software-intro h1 {
+    font-size: clamp(42px, 9vw, 70px);
+    letter-spacing: -1px;
+  }
+
+  .software-intro p {
+    font-size: 13px;
+  }
+
+  .software-project-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .software-projects {
+    padding-bottom: 75px;
+  }
+
+  .software-project-card {
+    min-height: 300px;
+    padding: 25px;
+  }
+
+  .software-project-card h2 {
+    font-size: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .software-nav-link,
+  .software-project-card,
+  .software-repository-arrow {
+    transition: none;
+  }
+
+  .software-project-card:hover,
+  .software-project-card:hover .software-repository-arrow {
+    transform: none;
+  }
+}
